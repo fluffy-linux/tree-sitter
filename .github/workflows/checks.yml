@@ -7,7 +7,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - run: rustup toolchain install stable --profile minimal
     - uses: Swatinem/rust-cache@v2
@@ -18,7 +18,7 @@ jobs:
     name: Check C warnings
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - name: Make C library to check that it's able to compile without warnings
       run: make -j CFLAGS="-Werror"
